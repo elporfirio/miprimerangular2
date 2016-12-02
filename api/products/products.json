@@ -1,0 +1,22 @@
+[{
+  "id": 1,
+  "nombre": "uno",
+  "codigo": "001",
+  "fechaPublicacion": "",
+  "precio": 99,
+  "descripcion": "Este es un producto",
+  "calificacion": 3,
+  "imagen": "http://www.generadormemes.com/media/created/1ze2yf.jpg",
+  "color": "blue"
+},
+{
+  "id": 2,
+  "nombre": "dos",
+  "codigo": "002",
+  "fechaPublicacion": "",
+  "precio": 129,
+  "descripcion": "Este es otro producto",
+  "calificacion": 2,
+  "imagen": "http://img.youtube.com/vi/CpoVIW1ykwg/hqdefault.jpg",
+  "color": "red"
+}]

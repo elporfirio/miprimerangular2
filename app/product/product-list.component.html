@@ -1,0 +1,27 @@
+<div class="nadita">
+  <h2>{{ titulo }}</h2>
+  <label>Filtrar:</label>
+  <input type="text" [(ngModel)]="filtro">
+  <button (click)="mostrarColores()">
+  {{ mostrarColor ? 'Ocultar' : 'Mostrar¿' }} Color
+  </button>
+  <code *ngIf="productos && productos.length == 0">No hay productos</code>
+
+  <span>Filtro elegido {{ filtro }}</span>
+  <ul *ngIf="productos && productos.length">
+    <li *ngFor="let product of productos | productFilter:filtro">
+      <span [style.color]="product.color">
+        <a [routerLink]="['/producto', product.id]">
+          {{ product.nombre | uppercase }}
+        </a>
+      </span> - <span *ngIf="mostrarColor">{{ product.color }}</span>
+      <hr>
+
+      {{ product.calificacion }}
+      <the-star
+        [rating]="product.calificacion"
+        (ratingClicked)="onRatingClicked($event)"
+      ></the-star>
+    </li>
+  </ul>
+</div>
